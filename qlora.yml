@@ -95,7 +95,7 @@ logging_steps: 1
 xformers_attention:
 flash_attention: true
 
-eval_sample_packing: False
+eval_sample_packing: false
 warmup_steps: 10
 evals_per_epoch: 3
 eval_table_size:
