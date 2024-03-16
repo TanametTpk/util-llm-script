@@ -11,7 +11,7 @@ datasets:
     type: sharegpt
     conversation: chatml
 dataset_prepared_path: last_run_prepared
-val_set_size: 0.01
+val_set_size: 0.005
 output_dir: ./lora-out
 
 adapter: lora
@@ -46,7 +46,7 @@ wandb_name:
 wandb_log_model:
 
 gradient_accumulation_steps: 4
-micro_batch_size: 16
+micro_batch_size: 8
 num_epochs: 4
 optimizer: adamw_torch
 lr_scheduler: cosine
@@ -66,6 +66,7 @@ logging_steps: 1
 xformers_attention:
 flash_attention: true
 
+chat_template: chatml
 eval_sample_packing: false
 warmup_steps: 10
 evals_per_epoch: 3
@@ -81,6 +82,6 @@ special_tokens:
   bos_token: "<s>"
   eos_token: "<|im_end|>"
   unk_token: "<unk>"
-tokens:
+tokens: # these are delimiters
   - "<|im_start|>"
   - "<|im_end|>"
