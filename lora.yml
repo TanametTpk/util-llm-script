@@ -35,6 +35,10 @@ lora_target_modules:
   - k_proj
   - o_proj
 
+lora_modules_to_save:
+ - embed_tokens
+ - lm_head
+
 wandb_project:
 wandb_entity:
 wandb_watch:
