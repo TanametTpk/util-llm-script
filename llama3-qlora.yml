@@ -2,8 +2,8 @@ base_model: scb10x/llama-3-typhoon-v1.5x-8b-instruct
 model_type: LlamaForCausalLM
 tokenizer_type: AutoTokenizer
 
-load_in_8bit: true
-load_in_4bit: false
+load_in_8bit: false
+load_in_4bit: true
 strict: false
 
 chat_template: llama3
@@ -19,7 +19,7 @@ sequence_len: 2048
 sample_packing: false
 pad_to_sequence_len: true
 
-adapter: lora
+adapter: qlora
 lora_model_dir:
 lora_r: 16
 lora_alpha: 8
