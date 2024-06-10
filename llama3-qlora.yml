@@ -1,4 +1,4 @@
-base_model: scb10x/llama-3-typhoon-v1.5-8b-instruct
+base_model: scb10x/llama-3-typhoon-v1.5x-8b-instruct
 model_type: LlamaForCausalLM
 tokenizer_type: AutoTokenizer
 
@@ -10,7 +10,7 @@ chat_template: llama3
 datasets:
   - path: tanamettpk/combine-rp-for-instruct
     type: sharegpt
-    conversation: chatml
+    conversation: llama3
 dataset_prepared_path:
 val_set_size: 0.05
 output_dir: ./outputs/lora-out
