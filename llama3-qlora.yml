@@ -6,6 +6,7 @@ load_in_8bit: true
 load_in_4bit: false
 strict: false
 
+chat_template: llama3
 datasets:
   - path: tanamettpk/combine-rp-for-instruct
     type: sharegpt
@@ -15,7 +16,7 @@ val_set_size: 0.05
 output_dir: ./outputs/lora-out
 
 sequence_len: 4096
-sample_packing: true
+sample_packing: false
 pad_to_sequence_len: true
 
 adapter: lora
@@ -45,7 +46,7 @@ wandb_name:
 wandb_log_model:
 
 gradient_accumulation_steps: 4
-micro_batch_size: 2
+micro_batch_size: 16
 num_epochs: 4
 optimizer: adamw_bnb_8bit
 lr_scheduler: cosine
@@ -57,6 +58,7 @@ bf16: auto
 fp16:
 tf32: false
 
+eval_sample_packing: false
 gradient_checkpointing: true
 early_stopping_patience:
 resume_from_checkpoint:
