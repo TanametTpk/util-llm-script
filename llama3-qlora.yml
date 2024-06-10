@@ -15,14 +15,14 @@ dataset_prepared_path:
 val_set_size: 0.05
 output_dir: ./outputs/lora-out
 
-sequence_len: 4096
+sequence_len: 2048
 sample_packing: false
 pad_to_sequence_len: true
 
 adapter: lora
 lora_model_dir:
-lora_r: 32
-lora_alpha: 16
+lora_r: 16
+lora_alpha: 8
 lora_dropout: 0.05
 lora_target_linear: true
 lora_fan_in_fan_out:
@@ -79,4 +79,4 @@ weight_decay: 0.0
 fsdp:
 fsdp_config:
 special_tokens:
-   pad_token: <|end_of_text|>
+  pad_token: <|end_of_text|>
