@@ -13,7 +13,7 @@ datasets:
     field_messages: conversations
     message_field_role: from
     message_field_content: value
-    
+
   - path: tanamettpk/tts-clean-tokenized
     type: chat_template
     field_messages: conversations
@@ -44,6 +44,9 @@ lora_target_modules:
   - v_proj
   - k_proj
   - o_proj
+lora_modules_to_save:
+ - embed_tokens
+ - lm_head
 
 wandb_project:
 wandb_entity:
